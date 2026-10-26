@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login | Masoodi EV Motors</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+<body class="admin-page">
+
+    <main class="admin-login-section">
+
+        <div class="admin-login-card">
+
+            <div class="admin-login-header">
+                <div class="admin-logo">ME</div>
+                <h1>Admin Login</h1>
+                <p>Masoodi EV Motors</p>
+            </div>
+
+            <form class="admin-login-form">
+
+                <div class="form-group">
+                    <label for="admin-email">Email Address</label>
+                    <input type="email" id="admin-email" name="email" placeholder="Enter admin email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="admin-password">Password</label>
+
+                    <div class="password-field">
+                        <input type="password" id="admin-password" name="password" placeholder="Enter password"
+                            required>
+
+                        <button type="button" class="password-toggle" onclick="togglePassword()">
+                            Show
+                        </button>
+                    </div>
+                </div>
+
+                <div class="admin-login-options">
+                    <label class="remember-me">
+                        <input type="checkbox" name="remember">
+                        <span>Remember me</span>
+                    </label>
+
+                    <a href="forgot-password.html" class="forgot-password">
+                        Forgot Password?
+                    </a>
+                </div>
+
+                <button type="submit" class="admin-login-button">
+                    Login
+                </button>
+
+            </form>
+
+            <a href="home.html" class="back-to-website">
+                ← Back to Website
+            </a>
+
+        </div>
+
+    </main>
+
+    <script>
+        function togglePassword() {
+            const password = document.getElementById("admin-password");
+            const button = document.querySelector(".password-toggle");
+
+            if (password.type === "password") {
+                password.type = "text";
+                button.textContent = "Hide";
+            } else {
+                password.type = "password";
+                button.textContent = "Show";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
